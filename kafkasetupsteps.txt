@@ -1,0 +1,30 @@
+Download the kafka from the following url to setup in windows
+=============================================================
+https://medium.com/@shaaslam/installing-apache-kafka-on-windows-495f6f2fd3c8
+
+Steps to launch the kafka services
+===================================
+============start the zookeeper Service ======================
+zkserver
+=========Start the kafka Server ==============
+kafka-server-start.bat E:\Softwares\kafka\kafka_2.12-1.1.0\config\server.properties
+========= Create the topic===========
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test1
+========= list of topics===========
+
+kafka-topics.bat --list --zookeeper localhost:2181
+
+=========Start the producer================
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+===========Start the Consumer =====================
+
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test1 --from-beginning
+
+
+===========Command to see the more deatils of topic================
+
+
+kafka-topics.bat --describe --zookeeper localhost:2181 --topic test
