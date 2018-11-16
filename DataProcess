@@ -1,0 +1,82 @@
+package com.demo.data;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.sql.DataFrame;
+import org.apache.spark.sql.SQLContext;
+
+public class DataProcess {
+
+	public static void main(String[] args) {
+		System.setProperty("hadoop.home.dir", "D:\\hadoop");
+        SparkConf sparkConfiguration = new SparkConf();
+        if (sparkConfiguration.get("spark.app.name", null) == null) {
+            sparkConfiguration.setAppName("JavaWordCount");
+            sparkConfiguration .setMaster("local[1]");
+          }
+        JavaSparkContext context = new JavaSparkContext(sparkConfiguration);
+        SQLContext sqlContext = new SQLContext(context.sc());
+		List<String> files = new ArrayList<String>();
+		files.add("Country_GMT_Offset");
+		files.add("List_Name_Variables");
+		files.add("Project_Build_Dates");
+		files.add("Production_Projects");
+		files.add("Campaign_Build_Dates");
+		files.add("meldb_cl_contact_list");
+		Calendar cal = new GregorianCalendar();
+		String zone = cal.getTimeZone().getID();
+	    System.out.println("Timezone is "+cal.getTimeZone().getID());
+		for(String file :files){
+			DataFrame data = sqlContext.read().format("com.databricks.spark.csv").option("header", "true").load("D:\\HOMEWARE\\data\\kafkaproject-master\\dashboarddata\\"+file+".csv");
+			sqlContext.registerDataFrameAsTable(data, file);
+//			sqlContext.sql("select * from "+file).show();
+		}
+		
+		DataFrame offsetData = sqlContext.sql("select Offset_Minutes from Country_GMT_Offset where IsECMLocation = 1 and  to_utc_timestamp(current_timestamp(), \""+zone+"\") between cast(unix_timestamp(GMT_StartDate,'MM/dd/yyyy hh:mm') as timestamp)  and cast(unix_timestamp(GMT_EndDate,'MM/dd/yyyy hh:mm') as timestamp)");
+		String offset = offsetData.collectAsList().get(0).getString(0);
+		Integer offsetMinutes= Integer.parseInt(offset)*60;
+		Integer offsetMinutes1= (Integer.parseInt(offset)*60)-(121*60);
+		System.out.println(offset);
+	//	sqlContext.sql("Select from_unixtime(unix_timestamp(to_utc_timestamp(current_timestamp(), \""+zone+"\"))+"+offsetMinutes+",'yyyy-MM-dd hh:mm:ss.SSS'),cast(unix_timestamp(StartDate,'yyyy-MM-dd hh:mm:ss.SSS') as timestamp)  , cast(unix_timestamp(EndDate,'yyyy-MM-dd hh:mm:ss.SSS') as timestamp) from List_Name_Variables ").show();
+		DataFrame varData = sqlContext.sql("Select Filter,Label from  List_Name_Variables where from_unixtime(unix_timestamp(to_utc_timestamp(current_timestamp(), \""+zone+"\"))+"+offsetMinutes+",'yyyy-MM-dd hh:mm:ss.SSS') between cast(unix_timestamp(StartDate,'yyyy-MM-dd hh:mm:ss.SSS') as timestamp)  and cast(unix_timestamp(EndDate,'yyyy-MM-dd hh:mm:ss.SSS') as timestamp) ").cache();
+		String  segmentFilter = varData.filter("Label = 'Segment'").collectAsList().get(0).getString(0);
+		String  passFilter = varData.filter("Label = 'Pass'").collectAsList().get(0).getString(0);
+		String  modeFilter = varData.filter("Label = 'Mode'").collectAsList().get(0).getString(0);
+		String  siteFilter = varData.filter("Label = 'Site'").collectAsList().get(0).getString(0);
+//		sqlContext.sql("select * from Production_Projects").printSchema();
+//		sqlContext.sql("select * from Project_Build_Dates").printSchema();
+		
+		String buildDateforProject = "select max(a.BuildDate) as BuildDate,a.Build_Project_Id as Build_Project_Id,p.RunNumber as RunNumber,a.SourceServerName as SourceServerName from Project_Build_Dates a"    
++" join Production_Projects p  on a.Build_Project_Id = p.Build_Project_Id  "  
++" and p.Region = '%s' and a.SourceServerName=p.SourceServerName where p.RunNumber = %s"      
++" and p.isTestStrategy = case when '%s'  = 'Test' then 1 else 0 end   "  
++" and from_unixtime(unix_timestamp(a.BuildDate)+%s,'yyyy-MM-dd hh:mm:ss.SSS') >= "    
++" from_unixtime(unix_timestamp(to_utc_timestamp(current_timestamp(), '%s'))+"+offsetMinutes1+",'yyyy-MM-dd hh:mm:ss.SSS')"
++" group by a.Build_Project_Id,p.RunNumber,a.SourceServerName order by a.Build_Project_Id,p.RunNumber,a.SourceServerName   ";
+		
+		String buildQuery = String.format(buildDateforProject,"Domestic",1,"Both",offsetMinutes,zone);
+		System.out.println(buildQuery);
+		DataFrame buildData = sqlContext.sql(buildQuery);
+		buildData.registerTempTable("BuildDatePerProject");
+//		sqlContext.sql("select * from BuildDatePerProject").show();
+		
+		String contactQuery ="select distinct c.contact_list_id as contact_list_id, c.SourceServerName as SourceServerName from "
+				+ "Campaign_Build_Dates c join BuildDatePerProject b on c.BuildDate = b.BuildDate and c.Build_Project_Id = b.Build_Project_Id"
+				+ " and c.SourceServerName=b.SourceServerName ";
+//		sqlContext.sql("select * from Campaign_Build_Dates").printSchema();
+		sqlContext.sql(contactQuery).show();
+//		
+//		sqlContext.sql("CREATE TABLE Project_Build_Dates(BuildDate timestamp,SourceServerName String,Build_Project_Id int)ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TextFile");
+//
+//		sqlContext.sql("CREATE TABLE   Production_Projects( build_project_id int ,RunNumber int,isTestStrategy string,SourceServerName String,region string)ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TextFile");
+//
+//		sqlContext.sql("select max(a.BuildDate),a.Build_Project_Id,p.RunNumber ,a.SourceServerName from Project_Build_Dates a join Production_Projects p  on a.build_project_id = p.build_project_id   and p.Region = 'Domestic' and a.SourceServerName=p.SourceServerName where p.RunNumber = 1 and p.isTestStrategy = case when 'Both'  = 'Test' then 1 else 0 end    and from_unixtime(unix_timestamp(a.BuildDate)+-18000,'yyyy-MM-dd hh:mm:ss.SSS') >=  from_unixtime(unix_timestamp(to_utc_timestamp(current_timestamp(), \"Asia/Calcutta\"))+-121,'yyyy-MM-dd hh:mm:ss.SSS') group by a.Build_Project_Id,p.RunNumber,a.SourceServerName order by a.Build_Project_Id,p.RunNumber,a.SourceServerName").show()
+//	
+	}
+
+}
