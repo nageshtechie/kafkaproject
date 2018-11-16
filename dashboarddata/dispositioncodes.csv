@@ -1,0 +1,121 @@
+Region,Disposition_Code,Description,Dialer_Dispo,Agent_Dispo,isConnect,isRight_Party_Contact,isCallback,isDo_Not_Call,isExclude,isAbort,isLeft_Message,isDialed,isPromise,IsAbandon,IsResolution,IsContact,IsApprove,IsCancel,IsDecline,IsEmailSent,IsLetterSent,IsOther,IsReferredforOverride,IsSmsSent,IsTransferredCall,IsUnableToDecisionApp,IsCallNotneeded,IsDecisioned,IsBankReferenced,Channel
+Domestic,0,Inbound Abandoned,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,3T,3 Tone,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,AA,Outbound - Answering Machine No Message,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,AH,Outbound - Call Abandoned on Hold,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ALMUNK,Unknown - System Applied,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,AM,Outbound - Answering Machine Left Message,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,AMDML,Played Message On Answering Machine,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,BL,Outbound - No Dial Tone,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,BN,Outbound - Invalid Phone Number,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,BZ,Outbound - Busy,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,C,Contact,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,CB,Outbound - Callback (Pool),0,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,CC_EXP,Record Restricted - Exclude List,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,CC_NRT,Outbound - Invalid Phone Number,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,CC_SFL,Call Complete After System Failure,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,CC_SPC,Superceded,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,CCSPC,Superceded,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,CNC,Contact - No Call,0,1,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DAC,Abort - Customer Hung Up On Hold,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DAD,Dialer Dropped Customer After Hold,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DAM,Outbound - Answering Machine,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DBU,Outbound - Busy,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DCB,Call Forward - No Answer,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DD,Fax - Modem,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DEFAULT,Default - Unknown,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DFM,Fax Machine,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DIC,Operator Intercept,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DIO,In-effective Order,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DN2,No circuit,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DNA,Outbound - No Answer,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DNC,No Circuit found,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DND,Outbound - No Dial Tone,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DNR,No Ring Back,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DPHU,Dialer Positive Voice - Hung Up on Message,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DPN,Connect After Hold,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DPV,Positive Voice,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DPVML,Dialer Positive Voice - Played Message,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DR2,Reorder,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DRF,Dial Request Failed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DRO,Reorder,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DST,SIT Tone,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DVC,Vacant Circuit,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,DXF,Transfer,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,Dialer
+Domestic,HU,System Hung Up on Call,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICEP,Inbound - Electronic Payment,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICLS,Inbound Letter Sent,0,1,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICNF,Inbound - No Fraud,0,1,1,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICNV,Inbound - No Payment,0,1,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICPP,Inbound - Promise to Pay,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICPX,Inbound - Existing Payment Changed,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICVC,Inbound - No Payment,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,ICYF,Inbound - Yes Fraud,0,1,1,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,II,Initial Info,0,1,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,IVEP,Inbound VR - Electronic Paymbet,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,IVNF,Inbound VR - Not Fraud,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,IVNV,Inboudn VR - No Value contact,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,IVPP,Inbound VR - Promise to pay,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,IVPX,Inbound VR - Promise Changed,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,IVVC,Inbound VR - Value Conact,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,IVVF,Inbound VR - Verify Fraud,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,MA,Merchant Action,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,MVRAA,VRSystem detected Answering Machine,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRAM,VR Answering Machine Left Message,1,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRAPPT,VR transferred to IVR application,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRHU,VR Hang up,1,0,1,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRNODIS,VR No Disposition,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRNT,VR customer not available,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRRPF,VR right party failed,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRRPHU,VR customer right party hang up,1,0,1,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRRPPM,VR right party hangup after message,1,0,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRRPT,VR right party CCP transferred,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRWPF,VR worng party failed,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRWPM,Customer is not available. Person Answering has not reached hold/waiting prompt.,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRWPPM,VR Wrong Party Play Message,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,MVRWPT,VR customer wrong party transfer,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,NA,Outbound - No Answer,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NAN,No Ring Back,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NC,Not Called,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NCP,FP dial order last number not contacted,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NCT,FP number to be recalled,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NN,No Number to Dial,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NON,No Disposition,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NR,Number Restricted - Exclude List,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,NVD,No Voice Detect,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCAA,Outgoing Call - Answering Machine - No Message,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCAM,Outbound - Left Message with Machine,0,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCBZ,Busy - Do Not Call,0,1,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCDA,Outbound Call Dead Air ,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCEP,Outbound - Electronic Payment,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCLM,Outbound - Left Message with Person,0,1,1,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCLS,Outbound Letter Sent,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCNAP,Outbound Promise to send document,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCNC,OCNC,0,1,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCNF,Outbound - No Fraud,0,1,1,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCNV,Outbound - No Value Contact,0,1,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCPP,Outbound - Promise to Pay,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCPV,Outbound PAR,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCPX,Outbound - Existing Payment Changed,0,1,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCVC,Outbound - No Payment,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,OCYF,Outbound - Yes Fraud,0,1,1,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,R7,No Ring Back,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,RF,Filter Excluded,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,RR,Record Restricted - Exclude List,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,SACB,Same Agent Callback,0,1,1,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,SASPC,Same Agent Superceded,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,SW_DCO,Simple Far End Connect,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,SW_RRF,SW ReRoute Failed,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,TZ,Out of Time Zone,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,UNK,Unknown - System Applied,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Dialer
+Domestic,VRAPPT,VR transferred a right party contact to another IVR application,1,0,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRHU,Customer hung up whilst in VR,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRNOTENU,Non Tenured Phone Number,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRNT,Call completed but the person answering has confirmed that the card member is not available to answer the call.,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRRPF,VR failure on Right Party Prompt,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRRPHU,VR Right Party Identified and hangs up,1,0,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRRPPM,Right Party Prompt block played but there was no transfer yet to the CCP(right party hangup after message played),1,0,1,1,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRRPT,VR transferred a right party contact to a rep,1,0,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRWPF,Generic failure in VXML,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRWPPM,Wrong Party hangup after message played,1,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
+Domestic,VRWPT,VR Wrong Party transferred to CCP,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,IVR
